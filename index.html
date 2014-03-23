@@ -1,0 +1,58 @@
+<!doctype html>
+<script src=strftime.min.js></script>
+<script>
+var it_IT = {
+    days: [ 'domenica', 'lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato' ],
+    shortDays: [ 'dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab' ],
+
+    months: [ 'gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio',
+              'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre' ],
+
+    shortMonths: [ 'gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago',
+                   'set', 'ott', 'nov', 'dic' ],
+    am: 'am',
+    pm: 'pm',
+    AM: 'AM',
+    PM: 'PM'
+}
+
+/*
+console.log("==== Test 1 ====");
+console.log(strftime('%B %d, %y %H:%M:%S')) // => Today
+
+console.log("==== Test 2 ====");
+console.log(strftime('%F %T', new Date(1307472705067))) // => 2011-06-07 18:51:45
+
+
+console.log("==== Test 3 ====");
+console.log(strftime('%B %d, %y %H:%M:%S', it_IT)) // => today
+
+console.log("==== Test 4 ====");
+console.log(strftime('%B %d, %y %H:%M:%S', new Date(1307472705067), it_IT)) // => giugno 7, 2011 18:51:45
+
+
+var strftime_IT = strftime.localizedStrftime(it_IT)
+
+console.log("==== Test 5 ====");
+console.log(strftime_IT('%B %d, %y %H:%M:%S')) // aprile 28, 2011 18:21:08
+
+var strftimeTZ = strftime.strftimeTZ
+
+console.log("==== Test 6 ====");
+console.log(strftimeTZ('%B %d, %y %H:%M:%S', new Date(1307472705067), -420)) // => June 07, 11 11:51:45
+
+console.log("==== Test 7 ====");
+console.log(strftimeTZ('%F %T', new Date(1307472705067), 120)) // => 2011-06-07 20:51:45
+
+console.log("==== Test 8 ====");
+console.log(strftimeTZ('', new Date(1307472705067), '-0700')) // => June 07, 11 11:51:45
+
+console.log("==== Test 9 ====");
+console.log(strftimeTZ('%F %T', new Date(1307472705067), '+0200')) // => 2011-06-07 20:51:45
+*/
+
+console.log("==== Stress test ====");
+console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', new Date(1307472705067), it_IT))
+
+
+</script>
