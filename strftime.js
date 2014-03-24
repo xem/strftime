@@ -2,7 +2,9 @@
 // @params: string [,date] [,locale]
 // t: placeholder (temp var)
 // r: placeholder (result)
-strftime = function(a, b, c, t, r){
+// l: placeholder (length)
+// s: placeholder (specifier)
+strftime = function(a, b, c, t, r, l, s){
 
   /** Initialization **/
 
@@ -20,10 +22,10 @@ strftime = function(a, b, c, t, r){
     }
   }
   
-  // If b is undefined, use current date
+  // if b is undefined, use current date
   b = b || new Date();
   
-  // If c is undefined, use default locale
+  // if c is undefined, use default locale
   c = c ||
   { days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
   , shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -37,18 +39,19 @@ strftime = function(a, b, c, t, r){
   
   /** Computing **/
   
-  // Result
+  // result
   r = "";
   
-  // Loop on the chars of a
-  for(i=0; i<a.length; i++){
+  // loop on the chars of a
+  for(i=0, l=a.length; i<l; i++){
   
-    // Specifiers (replacement)
-    if(a[i] == "%"){
+    // specifiers (replacement)
+    if(a[i] === "%"){
     
+      // switch on the character that follows the "%"
       i++;
-      
-      switch(a[i]){
+      s = a[i];
+      switch(s){
       
         // A: full weekday name
         case "A":
@@ -249,7 +252,7 @@ strftime = function(a, b, c, t, r){
       }
     }
     
-    // Other chars (copy)
+    // other chars (copy)
     else{
       r += a[i];
     }
