@@ -1,5 +1,5 @@
 <!doctype html>
-<script src=strftime.min.js></script>
+<script src=strftime.js></script>
 <script>
 var it_IT = {
     days: [ 'domenica', 'lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato' ],
@@ -16,8 +16,13 @@ var it_IT = {
     PM: 'PM'
 }
 
-console.log("==== Stress test ====");
-console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', new Date(1307472705067), it_IT))
+d = new Date();
+console.log(strftime("%Y/%m/%d %H:%M", d));
+console.log(strftime("%Y/%m/%d %H:%M", d));
+
+d = new Date(1307472705067);
+console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', d, it_IT))
+console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', d, it_IT))
 
 
 </script>
