@@ -1,3 +1,9 @@
+UPDATE
+======
+
+Here's a nice fork with npm integration and no memory-leaking cache: https://github.com/QwantResearch/strftime
+
+
 strftime
 ========
 
