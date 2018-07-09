@@ -1,0 +1,27 @@
+{
+  "name": "node_strfitme",
+  "version": "1.0.0",
+  "description": "fast strftime implementation for node inspired by php",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xem/strftime.git"
+  },
+  "keywords": [
+    "strftime",
+    "time",
+    "fast"
+  ],
+  "author": "Xem JLaville",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xem/strftime/issues"
+  },
+  "homepage": "https://github.com/xem/strftime#readme"
+}

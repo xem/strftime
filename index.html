@@ -1,6 +1,10 @@
 <!doctype html>
-<script src=strftime.js></script>
+
 <script>
+  module = {
+    exports : null
+  }
+
 var it_IT = {
     days: [ 'domenica', 'lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato' ],
     shortDays: [ 'dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab' ],
@@ -16,13 +20,18 @@ var it_IT = {
     PM: 'PM'
 }
 
-d = new Date();
-console.log(strftime("%Y/%m/%d %H:%M", d));
-console.log(strftime("%Y/%m/%d %H:%M", d));
+</script>
+<script src="./index.js"></script>
 
-d = new Date(1307472705067);
-console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', d, it_IT))
-console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', d, it_IT))
+<script>
+    strftime = module.exports
+    let d = new Date();
+    console.log(strftime("%Y/%m/%d %H:%M", d));
+    console.log(strftime("%Y/%m/%d %H:%M", d));
+
+    d = new Date(1307472705067);
+    console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', d, it_IT))
+    console.log(strftime('A: %A a: %a B: %B b: %b h: %h C: %C D: %D d: %d e: %e F: %F H: %H I: %I j: %j k: %k L: %L M: %M m: %m n: %n o: %o P: %P p: %p R: %R r: %r S: %S s: %s T: %T t: %t U: %U u: %u v: %v W: %W w: %w Y: %Y y: %y Z: %Z z: %z', d, it_IT))
 
 
 </script>
